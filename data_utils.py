@@ -88,13 +88,13 @@ class RESIDE_Dataset(data.Dataset):
 import os
 pwd=os.getcwd()
 print(pwd)
-path='E:/ZWX/ffa/data'#path to your 'data' folder
+path='./dataset'#path to your 'data' folder
 
-ITS_train_loader=DataLoader(dataset=RESIDE_Dataset(path+'/NTIRE/indoor',train=True,size=crop_size,format='.jpg'),batch_size=BS,shuffle=True)
-ITS_test_loader=DataLoader(dataset=RESIDE_Dataset(path+'/NTIRE/test/indoor',train=False,size=crop_size,format='.jpg'),batch_size=1,shuffle=False)
+ITS_train_loader=DataLoader(dataset=RESIDE_Dataset(path+'/RESIDE/indoor',train=True,size=crop_size,format='.jpg'),batch_size=BS,shuffle=True)
+ITS_test_loader=DataLoader(dataset=RESIDE_Dataset(path+'/RESIDE/test/indoor',train=False,size=crop_size,format='.jpg'),batch_size=1,shuffle=False)
 
-OTS_train_loader=DataLoader(dataset=RESIDE_Dataset(path+'/NTIRE/outdoor',train=True,size=crop_size,format='.jpg'),batch_size=BS,shuffle=True)
-OTS_test_loader=DataLoader(dataset=RESIDE_Dataset(path+'/NTIRE/test/outdoor',train=False,size=crop_size,format='.jpg'),batch_size=1,shuffle=False)
+OTS_train_loader=DataLoader(dataset=RESIDE_Dataset(path+'/NTIRERESIDE/outdoor',train=True,size=crop_size,format='.jpg'),batch_size=BS,shuffle=True)
+OTS_test_loader=DataLoader(dataset=RESIDE_Dataset(path+'/NTIRE/RESIDE/outdoor',train=False,size=crop_size,format='.jpg'),batch_size=1,shuffle=False)
 
 
 if __name__ == "__main__":
